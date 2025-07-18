@@ -78,16 +78,16 @@ Run the MRST startup script from MATLAB:
 run('...\mrst-2024b\startup.m')
 ```
 
-### 8. Enable Parallel Execution (Optional)
-To enable parallel batch calculations using PHREEQC:
-```matlab
-model.parpool = true;
-```
-
-### 9. Run Examples
+### 8. Run Examples
 Navigate to the examples directory:
 ```
 ...\mrst-2024b\modules\UGFACT\examples
+```
+
+### 9. Enable Parallel Execution (Optional)
+To enable parallel batch calculations using IPHREEQC, you need to activate it in the datafile:
+```matlab
+model.parpool = true;
 ```
 
 Run any example script to verify the installation.
