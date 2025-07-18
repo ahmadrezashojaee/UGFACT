@@ -1,7 +1,7 @@
 %% Set up problem
 % Define grid
 clear;clc;close all
-mrstModule add compositional ad-core ad-props mrst-gui ad-blackoil
+mrstModule add UGFACT ad-core ad-props mrst-gui ad-blackoil
 
 %% Gridding
 [NX,NY,NZ]=deal(50,1,1); % Number of cells in x,y,z direction
