@@ -1,5 +1,5 @@
 clear;clc;close all
-mrstModule add compositional ad-core ad-props mrst-gui ad-blackoil
+mrstModule add UGFACT ad-core ad-props mrst-gui ad-blackoil
 
 %% Import Data from Excel
 % go to Excel_Data folder and set your simulation scenario in DATA.xlsx
