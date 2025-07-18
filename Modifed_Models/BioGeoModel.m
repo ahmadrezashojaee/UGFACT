@@ -582,7 +582,7 @@ end
 %save('Stings.mat', 'Strings');
 %save('states.mat', 'states');
 iphreeqc = actxserver('IPhreeqcCOM.Object');
-iphreeqc.LoadDatabase('D:\Version 2 - UGFACT\mrst-2024b\modules\compositional\examples\UGFACT\database\PHREEQC_Modified.dat');
+iphreeqc.LoadDatabase('database\PHREEQC_Modified.dat');
 for i = 1:G.cells.num
     try
         % Main Code
