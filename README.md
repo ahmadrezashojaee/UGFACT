@@ -83,6 +83,8 @@ Navigate to the examples directory:
 ```
 ...\mrst-2024b\modules\UGFACT\examples
 ```
+Run any example script to verify the installation.
+
 
 ### 9. Enable Parallel Execution (Optional)
 To enable parallel batch calculations using IPHREEQC, you need to activate it in the datafile:
@@ -90,7 +92,6 @@ To enable parallel batch calculations using IPHREEQC, you need to activate it in
 model.parpool = true;
 ```
 
-Run any example script to verify the installation.
 
 ---
 
