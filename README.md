@@ -19,7 +19,9 @@ The author gratefully acknowledges the support received from **Energi Simulation
 ## 💻 System Requirements
 
 - **MATLAB** (R2022a or later recommended)
-- **MRST 2024b** from SINTEF
+- **MRST** from SINTEF  
+  ‣ ✅ Tested with **MRST 2024b**  
+  ‣ ✅ Also works with **MRST 2025a**
 - **PHREEQC / IPhreeqc** from USGS
 - Windows OS (required for IPhreeqc COM integration)
 
@@ -30,6 +32,10 @@ The author gratefully acknowledges the support received from **Energi Simulation
 ### 1. Download MRST
 Download MRST from SINTEF:
 https://www.sintef.no/projectweb/mrst/download/
+
+Tested with:
+- **MRST-2024b**
+- **MRST-2025a**
 
 ### 2. Framework Compatibility
 This framework is tested with **MRST-2024b**. It may work with other versions, but this has not been verified. Please test carefully if using other versions.
