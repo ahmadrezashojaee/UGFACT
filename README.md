@@ -90,7 +90,7 @@ Run any example script to verify the installation.
 
 ## 🧾 Licensing & Credits
 
-- **PHREEQC**: Developed by the USGS – [USGS Software License](https://www.usgs.gov/products/software/overview)
+- **PHREEQC**: Developed by the USGS – [USGS Software License](https://www.usgs.gov/software/phreeqc-version-3)
 - **MRST**: Developed by SINTEF – [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.html)
 
 Please cite PHREEQC and MRST appropriately in academic or published work.
