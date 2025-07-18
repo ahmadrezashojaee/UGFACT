@@ -587,7 +587,7 @@ parfor i = 1:G.cells.num
     try
         % Main Code
         iphreeqc = actxserver('IPhreeqcCOM.Object');
-        iphreeqc.LoadDatabase('C:\Users\as2220\OneDrive - Heriot-Watt University\PhD Project\Codes\mrst-2023b\modules\compositional\examples\Water_Gas_Simulations\database\PHREEQC_Modified.dat');
+        iphreeqc.LoadDatabase('database\PHREEQC_Modified.dat');
         iphreeqc.RunString(Strings{i,1});
         OUTPUT{i,1} = iphreeqc.GetSelectedOutputArray;
     catch ME
