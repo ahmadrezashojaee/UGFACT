@@ -38,7 +38,7 @@ Tested with:
 - **MRST-2025a**
 
 ### 2. Framework Compatibility
-This framework is tested with **MRST-2024b**. It may work with other versions, but this has not been verified. Please test carefully if using other versions.
+This framework is tested with **MRST-2024b** and **MRST-2025a**. It may work with other versions, but this has not been verified. Please test carefully if using other versions.
 
 ### 3. Integrate UGFACT Module
 Download or clone the `UGFACT` module and place it into the MRST modules folder:
