@@ -45,7 +45,7 @@ Download or clone the `UGFACT` module and place it into the MRST modules folder:
 ```
 ...\mrst-2024b\modules\UGFACT
 ```
-Make sure the folder name is UGFACT.
+**Make sure the folder name is "UGFACT".**
 
 ### 4. Download IPhreeqc (COM version)
 From the USGS website:
