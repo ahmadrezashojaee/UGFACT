@@ -1,0 +1,341 @@
+SOLUTION_RAW                 1 
+  -temp                      90
+  -pressure                  169.851
+  -potential                 0
+  -total_h                   111.06169684642
+  -total_o                   55.713439422212
+  -cb                        7.8581434401498e-015
+  -density                   0.97829884841196
+  -totals
+    Ca                       0.043871000000152
+    Carbonate(4)             0.069360000000159
+    O(0)                     4.984807753117e-021
+    Sulfide(-2)              1.0000000000012e-009
+  -pH                        7.9476097397724
+  -pe                        4
+  -mu                        0.063163534417822
+  -ah2o                      0.99850296284859
+  -mass_water                1
+  -soln_vol                  1.0282713328525
+  -total_alkalinity          0.087742000000296
+  -activities
+    Ca                       -2.1265751094882
+    Carbonate(4)             -3.6080833518333
+    E                        -4
+    H(0)                     -27.34611447516
+    O(0)                     -20.597059443928
+    Sulfide(-2)              -9.1246091436187
+  -gammas
+GAS_PHASE_RAW                1 
+  # GAS_PHASE_MODIFY candidate identifiers #
+  -type                      1
+  -total_p                   169.851
+  -volume                    0.1186
+  -component                 H2(g)
+    # GAS_PHASE_MODIFY candidate identifiers #
+    -moles                   0
+    # GAS_PHASE_MODIFY candidate identifiers with new_def=true #
+    -p_read                  0
+    # GasComp workspace variables #
+    -initial_moles           0
+    -p                       0
+    -phi                     0
+    -f                       0
+  -component                 N2(g)
+    # GAS_PHASE_MODIFY candidate identifiers #
+    -moles                   0
+    # GAS_PHASE_MODIFY candidate identifiers with new_def=true #
+    -p_read                  0
+    # GasComp workspace variables #
+    -initial_moles           0
+    -p                       0
+    -phi                     0
+    -f                       0
+  -component                 redoxCH4(g)
+    # GAS_PHASE_MODIFY candidate identifiers #
+    -moles                   0.52781
+    # GAS_PHASE_MODIFY candidate identifiers with new_def=true #
+    -p_read                  90.4362
+    # GasComp workspace variables #
+    -initial_moles           0
+    -p                       0
+    -phi                     0
+    -f                       0
+  -component                 redoxCarbonateO2(g)
+    # GAS_PHASE_MODIFY candidate identifiers #
+    -moles                   22.7467
+    # GAS_PHASE_MODIFY candidate identifiers with new_def=true #
+    -p_read                  3897.4497
+    # GasComp workspace variables #
+    -initial_moles           0
+    -p                       0
+    -phi                     0
+    -f                       0
+  -component                 redoxH2S(g)
+    # GAS_PHASE_MODIFY candidate identifiers #
+    -moles                   0
+    # GAS_PHASE_MODIFY candidate identifiers with new_def=true #
+    -p_read                  0
+    # GasComp workspace variables #
+    -initial_moles           0
+    -p                       0
+    -phi                     0
+    -f                       0
+  # GAS_PHASE_MODIFY candidate identifiers with new_def=true #
+  -new_def                   0
+  -solution_equilibria       0
+  -n_solution                -999
+  -temperature               363.15
+  # GasPhase workspace variables #
+  -total_moles               0
+  -v_m                       0
+  -pr_in                     1
+  -totals                    
+KINETICS_RAW                 1 
+  # KINETICS_MODIFY candidate identifiers #
+  -step_divide               1
+  -rk                        3
+  -bad_step_max              800
+  -use_cvode                 0
+  -cvode_steps               100
+  -cvode_order               5
+  -component                 Biomass_SRB
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-008
+      -m                     6.6107e-007
+      -m0                    6.6107e-007
+      -namecoef
+        H                    0
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 0
+      -initial_moles         0
+  -component                 Biomass_MET
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-008
+      -m                     6.6107e-007
+      -m0                    6.6107e-007
+      -namecoef
+        H                    0
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 0
+      -initial_moles         0
+  -component                 Biomass_ACE
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-008
+      -m                     6.6107e-007
+      -m0                    6.6107e-007
+      -namecoef
+        H                    0
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 0
+      -initial_moles         0
+  -component                 Biomass_FRB
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-008
+      -m                     6.6107e-007
+      -m0                    6.6107e-007
+      -namecoef
+        H                    0
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 0
+      -initial_moles         0
+  -component                 MET
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-008
+      -m                     0
+      -m0                    0
+      -namecoef
+        H+                   -1
+        H2                   -4
+        H2O                  3
+        HCarbonateO3         -1
+        MethaneH4            1
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 0
+      -initial_moles         0
+  -component                 SRB
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-008
+      -m                     0
+      -m0                    0
+      -namecoef
+        H+                   -1
+        H2                   -4
+        H2O                  4
+        HSulfide             1
+        SulfateO4            -1
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 0
+      -initial_moles         0
+  -component                 ACE
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-008
+      -m                     0
+      -m0                    0
+      -namecoef
+        Acetate              1
+        H+                   -1
+        H2                   -4
+        H2O                  4
+        HCarbonateO3         -2
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 0
+      -initial_moles         0
+  -component                 FRB
+      # KINETICS_MODIFY candidate identifiers #
+      -tol                   1e-008
+      -m                     0
+      -m0                    0
+      -namecoef
+        Fe_di                2
+        Fe_tri               -2
+      -d_params
+        
+      # KineticsComp workspace variables #
+      -moles                 0
+      -initial_moles         0
+  -equal_increments           1
+  -count                     1
+  -steps             
+    2592000 
+  # KINETICS workspace variables #
+  -totals                    
+EQUILIBRIUM_PHASES_RAW       1 
+  # EXCHANGE_MODIFY candidates; use new_def=true #
+  -new_def                   0
+  -component                 Brucite
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 Gypsum
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 Portlandite
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         1
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 Quartz
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 redoxAnhydrite
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 redoxCalcite
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 234.8576
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 redoxDolomite
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 redoxGoethite
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -component                 redoxPyrite
+      # EQUILIBRIUM_PHASES_MODIFY candidate identifiers #
+      -si                    0
+      -moles                 0
+      -force_equality        0
+      -dissolve_only         0
+      -precipitate_only      0
+      # PPassemblage workspace variables #
+      -si_org                0
+      -delta                 0
+      -initial_moles         0
+      -totals                
+  -eltList                   # List of all elements in phases and alternate reactions
+    Ca                       5
+    Carbonate                3
+    Fe_di                    1
+    Fe_tri                   1
+    H                        9
+    Mg                       2
+    O                        27
+    S                        1
+    Si                       1
+    Sulfate                  1
+    Sulfide                  2
+  # PPassemblage workspace variables #
+  -assemblage_totals
