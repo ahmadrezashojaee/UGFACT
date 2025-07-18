@@ -13,6 +13,8 @@ at the **Institute of GeoEnergy Engineering**, School of Energy, Geoscience, Inf
 
 Their guidance and support throughout the development of this framework are gratefully acknowledged.
 
+The author gratefully acknowledges the support received from **Energi Simulation** during the course of this PhD project.
+
 ---
 
 ## 💻 System Requirements
