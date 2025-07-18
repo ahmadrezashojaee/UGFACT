@@ -1,5 +1,6 @@
 # UGFACT
 Underground Gas Flow simulAtions with Coupled bio-geochemical reacTions (UGFACT)
+
 This MATLAB-based framework couples reservoir simulation with bio-geochemical batch reactions using MRST and PHREEQC.
 
 Developed by **Ahmadreza Shojaee** during his PhD at **Heriot-Watt University**, funded through the **James Watt Scholarship**.
