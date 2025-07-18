@@ -8,7 +8,7 @@ Developed by **Ahmadreza Shojaee** during his PhD at **Heriot-Watt University**,
 
 This work was conducted under the supervision of:  
 **Dr. Saeed Ghanbari**, **Dr. Gang Wang**, and **Prof. Eric Mackay**
-at the **Institute of GeoEnergy Engineering**, School of Energy, Geoscience, Infrastructure and Society (EGIS), Heriot-Watt University.
+at the **Institute of GeoEnergy Engineering**, **School of Energy, Geoscience, Infrastructure and Society (EGIS)**, **Heriot-Watt University**.
 
 Their guidance and support throughout the development of this framework are gratefully acknowledged.
 
