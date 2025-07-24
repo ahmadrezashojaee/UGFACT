@@ -23,7 +23,6 @@ The author gratefully acknowledges the support received from **Energi Simulation
   ‣ ✅ Tested with **MRST 2024b**  
   ‣ ✅ Also works with **MRST 2025a**
 - **PHREEQC / IPhreeqc** from USGS
-- Windows OS (required for IPhreeqc COM integration)
 
 ---
 
@@ -87,7 +86,7 @@ Run any example script to verify the installation.
 
 
 ### 9. Enable Parallel Execution (Optional)
-To enable parallel batch calculations using IPHREEQC, you need to activate it in the datafile:
+To enable parallel batch calculations using IPhreeqc, you need to activate it in the datafile:
 ```matlab
 model.parpool = true;
 ```
@@ -106,7 +105,9 @@ Please cite PHREEQC and MRST appropriately in academic or published work.
 ## 📖 Cite This Work
 
 If you use this framework in your research or publications, please cite it appropriately.  
-> [1] Interplay between microbial activity and geochemical reactions during underground hydrogen storage in a seawater-rich formation  
+> [1] New flow simulation framework for underground hydrogen storage modelling considering microbial and geochemical reactions
+> Available at: https://doi.org/10.1016/j.ijhydene.2025.150453
+> [2] Interplay between microbial activity and geochemical reactions during underground hydrogen storage in a seawater-rich formation  
 > Available at: https://doi.org/10.1016/j.ijhydene.2023.10.061
 
 
