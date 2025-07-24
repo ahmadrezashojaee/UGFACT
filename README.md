@@ -107,6 +107,7 @@ Please cite PHREEQC and MRST appropriately in academic or published work.
 If you use this framework in your research or publications, please cite it appropriately.  
 > [1] New flow simulation framework for underground hydrogen storage modelling considering microbial and geochemical reactions
 > Available at: https://doi.org/10.1016/j.ijhydene.2025.150453
+> 
 > [2] Interplay between microbial activity and geochemical reactions during underground hydrogen storage in a seawater-rich formation  
 > Available at: https://doi.org/10.1016/j.ijhydene.2023.10.061
 
