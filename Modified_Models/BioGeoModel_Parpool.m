@@ -181,7 +181,7 @@ for i=1:G.cells.num
         Brucite_Share(i)   = states{t,1}.Mineralogy.Brucite(i) * 0.01; % weight precentage of Hematite
         Portlandite_Share(i)  = states{t,1}.Mineralogy.Portlandite(i) * 0.01; % weight precentage of Hematite
         Pyrite_Share(i)    = states{t,1}.Mineralogy.Pyrite(i) * 0.01; % weight precentage of Hematite
-        Gypsum_Share(i)    = states{t,1}.Mineralogy.Goethite(i) * 0.01; % weight precentage of Hematite
+        Gypsum_Share(i)    = states{t,1}.Mineralogy.Gypsum(i) * 0.01; % weight precentage of Hematite
         A = Quartz_Share(i) + Calcite_Share(i) + Dolomite_Share(i) + Anhydrite_Share(i) + Goethite_Share(i) + Brucite_Share(i) + Portlandite_Share(i) + Pyrite_Share(i) + Gypsum_Share(i);
         B = Quartz_Share(i)./2.65 + Calcite_Share(i)./2.71 + Dolomite_Share(i)./2.84 + Anhydrite_Share(i)./2.97 + Goethite_Share(i)./4.26 + Brucite_Share(i)./2.40 + Pyrite_Share(i)./4.9 + Gypsum_Share(i)./2.39;
         rho_ave(i)  = (A)./(B); %g/cm^3
@@ -821,5 +821,6 @@ states{t,1}.IonMole.S6 = states{t,1}.s(:,1).*model.G.cells.volumes.*model.rock.p
 states{t,1}.IonMole.S2 = states{t,1}.s(:,1).*model.G.cells.volumes.*model.rock.poro.*rho_molar_Water.*X(:,1).*0.018015268.*states{t,1}.Solution.S2;
 states{t,1}.IonMole.Si = states{t,1}.s(:,1).*model.G.cells.volumes.*model.rock.poro.*rho_molar_Water.*X(:,1).*0.018015268.*states{t,1}.Solution.Si;
 states{t,1}.IonMole.Acetate = states{t,1}.s(:,1).*model.G.cells.volumes.*model.rock.poro.*rho_molar_Water.*X(:,1).*0.018015268.*states{t,1}.Solution.Acetate;
+
 
 end
