@@ -110,6 +110,3 @@ If you use this framework in your research or publications, please cite it appro
 > 
 > [2] Interplay between microbial activity and geochemical reactions during underground hydrogen storage in a seawater-rich formation  
 > Available at: https://doi.org/10.1016/j.ijhydene.2023.10.061
-
-
-© 2025 Ahmadreza Shojaee – Heriot-Watt University
