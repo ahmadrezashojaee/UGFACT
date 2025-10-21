@@ -582,7 +582,7 @@ end
 %save('Stings.mat', 'Strings');
 %save('states.mat', 'states');
 iphreeqc = actxserver('IPhreeqcCOM.Object');
-iphreeqc.LoadDatabase('D:\Version 2 - UGFACT\mrst-2024b\modules\compositional\examples\UGFACT\database\PHREEQC_Modified.dat');
+iphreeqc.LoadDatabase('database\PHREEQC_Modified.dat');
 for i = 1:G.cells.num
     try
         % Main Code
@@ -818,5 +818,6 @@ states{t,1}.IonMole.S6 = states{t,1}.s(:,1).*model.G.cells.volumes.*model.rock.p
 states{t,1}.IonMole.S2 = states{t,1}.s(:,1).*model.G.cells.volumes.*model.rock.poro.*rho_molar_Water.*X(:,1).*0.018015268.*states{t,1}.Solution.S2;
 states{t,1}.IonMole.Si = states{t,1}.s(:,1).*model.G.cells.volumes.*model.rock.poro.*rho_molar_Water.*X(:,1).*0.018015268.*states{t,1}.Solution.Si;
 states{t,1}.IonMole.Acetate = states{t,1}.s(:,1).*model.G.cells.volumes.*model.rock.poro.*rho_molar_Water.*X(:,1).*0.018015268.*states{t,1}.Solution.Acetate;
+
 
 end
