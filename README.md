@@ -18,7 +18,7 @@ The author gratefully acknowledges the support received from **Energi Simulation
 
 ## 💻 System Requirements
 
-- **MATLAB** (R2022a or later recommended)
+- **MATLAB** (R2023b or later recommended)
 - **MRST** from SINTEF  
   ‣ ✅ Tested with **MRST 2024b**  
   ‣ ✅ Also works with **MRST 2025a**
