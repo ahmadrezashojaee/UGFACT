@@ -232,10 +232,10 @@ indexw = Sw == 0; % Avoid Zero Water Volume/Mass
 Sw(indexw) = 0.000001;
 mass_H2O_Profile      = Sw.*model.G.cells.volumes.*model.rock.poro.*rho_molar_Water.*X(:,1).*0.018015268;
 if t==1
-    states{1,1}.Solution.SRB_Biomass = repmat(M0_SRB,model.G.cells.num,1)*mass_H2O_Profile(i);
-    states{1,1}.Solution.MET_Biomass = repmat(M0_MET,model.G.cells.num,1)*mass_H2O_Profile(i);
-    states{1,1}.Solution.ACE_Biomass = repmat(M0_ACE,model.G.cells.num,1)*mass_H2O_Profile(i);
-    states{1,1}.Solution.FRB_Biomass = repmat(M0_FRB,model.G.cells.num,1)*mass_H2O_Profile(i);
+    states{1,1}.Solution.SRB_Biomass = repmat(M0_SRB,model.G.cells.num,1)*mass_H2O_Profile;
+    states{1,1}.Solution.MET_Biomass = repmat(M0_MET,model.G.cells.num,1)*mass_H2O_Profile;
+    states{1,1}.Solution.ACE_Biomass = repmat(M0_ACE,model.G.cells.num,1)*mass_H2O_Profile;
+    states{1,1}.Solution.FRB_Biomass = repmat(M0_FRB,model.G.cells.num,1)*mass_H2O_Profile;
 end
 mass_H2_Profile       = states{t,1}.FlowProps.ComponentTotalMass{2,1};
 H2component_Profile   = states{t,1}.components(:,2);
@@ -824,5 +824,6 @@ states{t,1}.IonMole.Acetate = states{t,1}.s(:,1).*model.G.cells.volumes.*model.r
 
 
 end
+
 
 
