@@ -7,7 +7,7 @@ function OUTPUT = runPhreeqcForAllCells_Parpool(Strings, activeCells)
     OUTPUT = cell(nc, 1);
 
     % Database
-    dbPath = 'C:\Users\as2220\OneDrive - Heriot-Watt University\PhD Project\Codes\mrst-2023b\modules\compositional\examples\Water_Gas_Simulations\database\PHREEQC_Modified.dat';
+    dbPath = 'database\PHREEQC_Modified.dat';
 
     % Logical flag: true if this cell failed
     errorFlag = false(nc, 1);
@@ -56,3 +56,4 @@ function OUTPUT = runPhreeqcForAllCells_Parpool(Strings, activeCells)
         fprintf('PHREEQC: all active cells converged.\n');
     end
 end
+
