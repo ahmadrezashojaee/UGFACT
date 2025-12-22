@@ -1,7 +1,7 @@
 %% Set up problem
 % Define grid
 clear;clc;close all
-mrstModule add UGFACT ad-core ad-props mrst-gui ad-blackoil
+mrstModule add UGFACT2 ad-core ad-props mrst-gui ad-blackoil
 
 %% Gridding
 [NX,NY,NZ]=deal(50,1,1); % Number of cells in x,y,z direction
@@ -43,7 +43,7 @@ mixture,... % Compositional mixture
 % Construct models for both formulations. Same input arguments
 
 %% Defining the model based on the Grid, Rock, fluid, and mixture.
-model = GenericOverallCompositionModel(arg{:}); % Overall mole fractions model
+model = GenericOverallCompositionModel_Modified(arg{:}); % Overall mole fractions model
 
 %model = GenericNaturalVariablesModel(arg{:}); % Natural variables
 model.EOSModel.PropertyModel.volumeShift = [0, 0, 0, 0, 0, 0]; % Volume shift
@@ -136,6 +136,11 @@ model.Kinetic.M0_FRB   = model.Kinetic.N0_FRB * model.Kinetic.m_FRB * 1/model.Ki
 model.Kinetic.Nmax_FRB = 1e10*1000;       %Maximum biomass concnetration
 model.Kinetic.Mmax_FRB = model.Kinetic.Nmax_FRB * model.Kinetic.m_FRB * 1/model.Kinetic.MW_FRB; %Maximum biomass mole per 1 kg of water
 model.Kinetic.Mmin_FRB = model.Kinetic.N0_FRB * model.Kinetic.m_FRB / model.Kinetic.MW_FRB; %Minimum biomass mole per 1 kg of water
+
+model.state0.initGeoChem = true;
+if (model.BioGeo && model.state0.initGeoChem)
+    model = GeochemistryInitializer(model,state0);
+end
 
 % stand alone flash - this section is not necessary. Here is to find Z_V
 eos = EquationOfStateModel([], mixture, 'Peng-Robinson');

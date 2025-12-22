@@ -1,5 +1,5 @@
 clear;clc;close all
-mrstModule add UGFACT ad-core ad-props mrst-gui ad-blackoil
+mrstModule add UGFACT2 ad-core ad-props mrst-gui ad-blackoil
 
 %% Import Data from Excel
 % go to Excel_Data folder and set your simulation scenario in DATA.xlsx
@@ -54,7 +54,7 @@ mixture,... % Compositional mixture
 % Construct models for both formulations. Same input arguments
 
 %% Defining the model based on the Grid, Rock, fluid, and mixture.
-model = GenericOverallCompositionModel(arg{:}); % Overall mole fractions model
+model = GenericOverallCompositionModel_Modified(arg{:}); % Overall mole fractions model
 
 %model = GenericNaturalVariablesModel(arg{:}); % Natural variables
 model.EOSModel.PropertyModel.volumeShift = [0, 0, 0, 0, 0, 0]; % Volume shift
@@ -65,7 +65,7 @@ p = Pi*barsa; T = 273.15 + Temp; s = []; z = [Z_H2O, Z_H2, Z_CO2, Z_CH4, Z_N2, Z
 state0   = initCompositionalState(model, p, T, s, z); % Initialize state
 %% Input data for biochemical and geochemical reactions
 model.BioGeo = true;
-model.parpool = false;   % Use parallel calculations
+model.parpool = true;   % Use parallel calculations
 model.parpoolCores  = 5; % Number of cores
 model.BioGeoSteps  = 5;  % Number of sub steps for bio-geochemical simulations 
 model.Solution.pH    = repmat(pH,G.cells.num,1);
@@ -147,6 +147,11 @@ model.Kinetic.M0_FRB   = model.Kinetic.N0_FRB * model.Kinetic.m_FRB * 1/model.Ki
 model.Kinetic.Nmax_FRB = 1e10*1000;       %Maximum biomass concnetration
 model.Kinetic.Mmax_FRB = model.Kinetic.Nmax_FRB * model.Kinetic.m_FRB * 1/model.Kinetic.MW_FRB; %Maximum biomass mole per 1 kg of water
 model.Kinetic.Mmin_FRB = model.Kinetic.N0_FRB * model.Kinetic.m_FRB / model.Kinetic.MW_FRB; %Minimum biomass mole per 1 kg of water
+
+model.state0.initGeoChem = true;
+if (model.BioGeo && model.state0.initGeoChem)
+    model = GeochemistryInitializer(model,state0);
+end
 
 % stand alone flash - this section is not necessary. Here is to find Z_V
 eos = EquationOfStateModel([], mixture, 'Peng-Robinson');
