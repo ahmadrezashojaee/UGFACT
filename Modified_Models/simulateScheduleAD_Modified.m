@@ -343,10 +343,14 @@ along with MRST.  If not, see <http://www.gnu.org/licenses/>.
             states{i,1}.moleConservation    = [];
             states{i,1}.Strings    = cell(model.G.cells.num,1);
             %Performing Bio-Geochemical reactions in all cells
-            if isempty(gcp('nocreate'))
-                parpool(17); % Start a parallel pool with 17 workers
+            if model.parpool
+                if isempty(gcp('nocreate'))
+                    parpool(model.parpoolCores); % Start a parallel pool with 4 workers
+                end
+                [model,states] = BioGeoModel_Parpool_Modified_Functionized(model,states,i,dt);
+            else
+                [model,states] = BioGeoModel_Modified_Functionized(model,states,i,dt);
             end
-            [model,states] = BioGeoModel_Parpool_Modified_Functionized(model,states,i,dt);
             % delete(gcp('nocreate'))
             %Applying Ion ransport if the model is 1D
             % if (model.G.cartDims(2)==1 && model.G.cartDims(1)>1 && model.G.cartDims(3) == 1)

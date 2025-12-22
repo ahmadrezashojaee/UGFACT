@@ -1,4 +1,4 @@
-function OUTPUT = runPhreeqcForAllCells(Strings, activeCells)
+function OUTPUT = runPhreeqcForAllCells_Parpool(Strings, activeCells)
 %RUNPHREEQCFORALLCELLS
 % Run PHREEQC for active cells only.
 % Prints cell numbers that did not converge.
@@ -12,7 +12,7 @@ function OUTPUT = runPhreeqcForAllCells(Strings, activeCells)
     % Logical flag: true if this cell failed
     errorFlag = false(nc, 1);
 
-    for i = 1:nc
+    parfor i = 1:nc
         OUTPUT{i} = [];  % default
 
         if activeCells(i) && ~isempty(Strings{i})

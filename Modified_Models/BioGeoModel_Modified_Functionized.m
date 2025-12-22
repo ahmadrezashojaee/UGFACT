@@ -1,4 +1,4 @@
-function [model, states] = BioGeoModel_Parpool_Modified_Functionized(model, states, t, dt)
+function [model, states] = BioGeoModel_Modified_Functionized(model, states, t, dt)
 % BioGeoModel - Bio-Geochemical model - Considering no reaction when Sw = 0
 %
 % Syntax:
@@ -35,12 +35,12 @@ phaseData = computePhaseMassesAndPressures(model, states, t, dt, mineralData);
 Strings = buildPhreeqcStrings(model, states, t, phaseData, mineralData);
 
 % 5) Call PHREEQC in parallel and collect OUTPUT
-OUTPUT  = runPhreeqcForAllCells_Parpool(Strings, phaseData.Sw);
+OUTPUT  = runPhreeqcForAllCells(Strings, phaseData.Sw);
 
 % 6) Postprocess OUTPUT and update state variables
 [states, reactionRates] = updateStatesFromPhreeqc(model, states, t, OUTPUT, phaseData, mineralData);
 
 % 7) Update MRST mass / Zi etc.
-states = updateMassAndZi_Parpool(model, states, t, reactionRates, phaseData);
+states = updateMassAndZi(model, states, t, reactionRates, phaseData);
 
 end

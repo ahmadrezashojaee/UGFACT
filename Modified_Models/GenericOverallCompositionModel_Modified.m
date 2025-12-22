@@ -1,13 +1,17 @@
-classdef GenericOverallCompositionModel < OverallCompositionCompositionalModel & GenericReservoirModel
+classdef GenericOverallCompositionModel_Modified < OverallCompositionCompositionalModel & GenericReservoirModel
     properties
+    parpool
+    parpoolCores
+    state0
     Solution
     Mineralogy
     BioGeo
     Kinetic
+    BioGeoSteps
     end
     
     methods
-        function model = GenericOverallCompositionModel(varargin)
+        function model = GenericOverallCompositionModel_Modified(varargin)
             model = model@OverallCompositionCompositionalModel(varargin{:});
             model.OutputStateFunctions = {'ComponentTotalMass', 'Density'};
         end
