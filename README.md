@@ -102,7 +102,7 @@ If you use this framework in your research or publications, please cite it appro
 > [2] Interplay between microbial activity and geochemical reactions during underground hydrogen storage in a seawater-rich formation  
 > Available at: https://doi.org/10.1016/j.ijhydene.2023.10.061
 >
-> [3] Modelling coupled flow with key biogeochemical reactions in subsurface hydrogen systems
+> [3] Modelling coupled flow with key biogeochemical reactions in subsurface hydrogen systems 
 > Available at: https://doi.org/10.1016/j.ijhydene.2026.154478
 
 ---
