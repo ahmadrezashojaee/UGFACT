@@ -87,7 +87,7 @@ model.Mineralogy.Gypsum       = repmat(0,G.cells.num,1); %#ok<REPMAT> % Weight P
 %Methanogenesis
 model.Kinetic.mu_MET   = 1.109;%1.109;  0.3 4.1      %per day
 model.Kinetic.b_MET    = 0.01 * model.Kinetic.mu_MET; %Decay Coefficent
-model.Kinetic.Y_MET    = 0.03*4;       %Growth Yield
+model.Kinetic.Y_MET    = 0.03;       %Growth Yield
 model.Kinetic.K_Dmet   = 10e-6;      %Electron Donor Half Saturation Constant
 model.Kinetic.K_Amet   = 230e-6;     %Electron Acceptor Half Saturation Constant
 model.Kinetic.MW_MET   = 24.6;         %Microbe Molecular Weight g/mol
@@ -100,7 +100,7 @@ model.Kinetic.Mmin_MET = model.Kinetic.N0_MET * model.Kinetic.m_MET / model.Kine
 %Sulfate reduction
 model.Kinetic.mu_SRB   = 1.048;%5.5;%1.048; 0.2       %per day
 model.Kinetic.b_SRB    = 0.01 * model.Kinetic.mu_SRB; %Decay Coefficent
-model.Kinetic.Y_SRB    = 0.08*4;       %Growth Yield
+model.Kinetic.Y_SRB    = 0.08;       %Growth Yield
 model.Kinetic.K_Dsrb   = 2.9e-6;       %Electron Donor Half Saturation Constant
 model.Kinetic.K_Asrb   = 2751.5e-6;    %Electron Acceptor Half Saturation Constant
 model.Kinetic.MW_SRB   = 24.6;         %Microbe Molecular Weight g/mol
@@ -113,7 +113,7 @@ model.Kinetic.Mmin_SRB = model.Kinetic.N0_SRB * model.Kinetic.m_SRB / model.Kine
 %Acetogenesis
 model.Kinetic.mu_ACE   = 0.872;%1.9;%0.872; 0.4       %per day
 model.Kinetic.b_ACE    = 0.01 * model.Kinetic.mu_ACE; %Decay Coefficent
-model.Kinetic.Y_ACE    = 0.07*4;       %Growth Yield
+model.Kinetic.Y_ACE    = 0.07;       %Growth Yield
 model.Kinetic.K_Dace   = 2.5e-6;       %Electron Donor Half Saturation Constant
 model.Kinetic.K_Aace   = 115.5e-6;     %Electron Acceptor Half Saturation Constant
 model.Kinetic.MW_ACE   = 24.6;         %Microbe Molecular Weight g/mol
