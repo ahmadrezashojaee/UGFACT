@@ -35,7 +35,7 @@ phaseData = computePhaseMassesAndPressures(model, states, t, dt, mineralData);
 Strings = buildPhreeqcStrings(model, states, t, phaseData, mineralData);
 
 % 5) Call PHREEQC in parallel and collect OUTPUT
-OUTPUT  = runPhreeqcForAllCells_Parpool(Strings, phaseData.Sw);
+OUTPUT  = runPhreeqcForAllCells_Parpool(Strings, phaseData.activeCells);
 
 % 6) Postprocess OUTPUT and update state variables
 [states, reactionRates] = updateStatesFromPhreeqc(model, states, t, OUTPUT, phaseData, mineralData);
