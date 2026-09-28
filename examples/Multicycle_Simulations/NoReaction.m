@@ -116,7 +116,7 @@ arg = {G, rock, f, ... % Standard arguments
 % Construct models for both formulations. Same input arguments
 
 %% Defining the model based on the Grid, Rock, fluid, and mixture.
-model = GenericOverallCompositionModel(arg{:}); % Overall mole fractions model
+model = GenericOverallCompositionModel_Modified(arg{:}); % Overall mole fractions model
 
 %model = GenericNaturalVariablesModel(arg{:}); % Natural variables
 model.EOSModel.PropertyModel.volumeShift = [0, 0, 0, 0, 0, 0]; % Volume shift
