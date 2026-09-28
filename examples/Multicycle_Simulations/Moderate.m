@@ -2,7 +2,7 @@
 %% Set up problem
 % Define grid
 clear;clc;close all
-mrstModule add compositional ad-core ad-props mrst-gui ad-blackoil deckformat
+mrstModule add UGFACT2 ad-core ad-props mrst-gui ad-blackoil deckformat
 %% Gridding
 fn = 'grid.GRDECL';
 G = readGRDECL(fn);
