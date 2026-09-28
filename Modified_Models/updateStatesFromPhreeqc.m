@@ -216,7 +216,7 @@ function [states, reactionRates] = updateStatesFromPhreeqc(model, states, t, OUT
             FRB_Biomass(i) = output{end,62} * mass_H2O_Profile(i);
 
             % update water mass profile factor
-            mass_H2O_Profile(i) = output{end,5} * mass_H2O_Profile(i);
+            % mass_H2O_Profile(i) = output{end,5} * mass_H2O_Profile(i);
 
             % ---- Total moles (aqueous + gas) from PHREEQC (columns 51–55,18–21,19) ----
             H2(i,1)  = output{end,51} * mass_H2O_Profile(i) + output{end,18} * Water(i);
