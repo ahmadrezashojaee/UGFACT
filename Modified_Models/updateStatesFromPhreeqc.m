@@ -205,9 +205,9 @@ function [states, reactionRates] = updateStatesFromPhreeqc(model, states, t, OUT
                 Rgas .* temp(i) ./ output{end,50} ./ mass_H2O_Profile(i);
 
             % keep old pressure if flagged
-            if idxKeepOldP(i)
-                pressure(i) = states{t,1}.pressure(i);
-            end
+            % if idxKeepOldP(i)
+            %    pressure(i) = states{t,1}.pressure(i);
+            % end
 
             % ---- Biomass (columns 56,58,60,62) ----
             SRB_Biomass(i) = output{end,56} * mass_H2O_Profile(i);
