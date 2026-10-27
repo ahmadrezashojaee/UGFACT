@@ -102,10 +102,18 @@ Si(Si < tol)       = 0;
 Acetate(Acetate < tol) = 0;
 
 % Biomass (carried from initBiomassAndGeochem)
-SRB_Biomass = state.Solution.SRB_Biomass;
-MET_Biomass = state.Solution.MET_Biomass;
-ACE_Biomass = state.Solution.ACE_Biomass;
-FRB_Biomass = state.Solution.FRB_Biomass;
+if t==1
+    SRB_Biomass = state.Solution.SRB_Biomass*mass_H2_Profile;
+    MET_Biomass = state.Solution.MET_Biomass*mass_H2_Profile;
+    ACE_Biomass = state.Solution.ACE_Biomass*mass_H2_Profile;
+    FRB_Biomass = state.Solution.FRB_Biomass*mass_H2_Profile;
+else
+    SRB_Biomass = state.Solution.SRB_Biomass;
+    MET_Biomass = state.Solution.MET_Biomass;
+    ACE_Biomass = state.Solution.ACE_Biomass;
+    FRB_Biomass = state.Solution.FRB_Biomass;
+end
+    
 
 % Gas constant in atm·L/(mol·K)
 R = 0.082057366080960;
